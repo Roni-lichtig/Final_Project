@@ -1,0 +1,69 @@
+/* === GENERAL === */
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+/* === NAVBAR === */
+.navbar {
+  position: relative;
+  z-index: 10;
+}
+
+.navbar-brand img {
+  max-height: 120px;
+}
+
+form[role="search"] {
+  width: 300px;
+}
+
+@media (max-width: 768px) {
+  .navbar-brand img {
+    height: 80px !important;
+  }
+
+  .navbar-collapse {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar-collapse form[role="search"] {
+    width: 100%;
+  }
+
+  .navbar-collapse .form-control {
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+
+  .navbar-collapse .btn {
+    width: 100%;
+  }
+}
+
+/* === HOMEPAGE HERO === */
+.highlight-box {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #ffc107;
+  position: relative;
+  z-index: 1;
+}
+
+/* === IMAGE CARDS === */
+.uniform-img {
+  width: 100%;
+  max-width: 100%;
+  height: 250px;
+  object-fit: cover;
+  display: block;
+}
+
+/* === FOOTER === */
+footer a:hover {
+  text-decoration: underline;
+}
+
+.text-sky-dark {
+  color: #058181;
+}
