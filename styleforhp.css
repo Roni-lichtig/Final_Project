@@ -1,64 +1,111 @@
-body {
-  font-family: 'Poppins', sans-serif;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Luigi's Trattoria | DineWise</title>
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styleforhp.css" />
+  <style>
+    main {
+      position: relative; 
+      padding-top: 60px; 
+    }
+    .back-button {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      z-index: 10;
+    }
 
-.navbar {
-  position: relative;
-  z-index: 10;
-}
+   
+    .row.swapped {
+      flex-direction: row-reverse;
+    }
 
-.navbar-brand img {
-  max-height: 120px;
-}
+    .uniform-img {
+      max-height: 400px;
+      object-fit: cover;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <header class="custom-header bg-dark py-3">
+    <div class="container text-center">
+      <a href="Restaurants.html">
+        <img src="logo_no_bg.png" alt="DineWise Logo" class="img-fluid" style="height: 100px;" />
+      </a>
+    </div>
+  </header>
 
-form[role="search"] {
-  width: 300px;
-}
+  <main class="container py-5">
+    <!-- כפתור ה-Back למעלה שמאל -->
+    <a href="Restaurants.html" class="btn btn-warning text-white back-button">← Back to Restaurants</a>
 
-@media (max-width: 768px) {
-  .navbar-brand img {
-    height: 80px !important;
-  }
+    <div class="row mb-5" id="content-row">
+      <div class="col-md-6">
+        <img
+          src="https://www.travelandleisure.com/thmb/vAg5d_rhUy-c54Xwz8f0i6jAKYk=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/TAL-restaurant-patio-in-italy-ITLNRESTAURANTS0424-832da3120e1f4b12ade4c4cf6a5ab694.jpg"
+          alt="Luigi's Trattoria"
+          class="img-fluid rounded shadow uniform-img"
+        />
+      </div>
+      <div class="col-md-6">
+        <h2 class="text-warning">Luigi's Trattoria</h2>
+        <p class="mt-3">
+          Authentic Italian cuisine in the heart of Tel Aviv. Come for handmade pasta, stay for the warm hospitality and
+          unforgettable tiramisu.
+        </p>
 
-  .navbar-collapse {
-    flex-direction: column;
-    align-items: flex-start;
-  }
+        <h5 class="mt-4">📍 Address</h5>
+        <p>Via Roma 12, Tel Aviv</p>
 
-  .navbar-collapse form[role="search"] {
-    width: 100%;
-  }
+        <h5>🕒 Opening Hours</h5>
+        <ul>
+          <li>Sun–Thu: 12:00–23:00</li>
+          <li>Fri: 12:00–15:00</li>
+          <li>Sat: Closed</li>
+        </ul>
 
-  .navbar-collapse .form-control {
-    width: 100%;
-    margin-bottom: 0.5rem;
-  }
+        <h5>📞 Contact</h5>
+        <p>Phone: 03-9876543</p>
+      </div>
+    </div>
+  </main>
 
-  .navbar-collapse .btn {
-    width: 100%;
-  }
-}
+  <footer class="bg-white text-dark pt-4 border-top">
+    <div class="container">
+      <div class="text-center">
+        <img src="logo_no_bg.png" alt="DineWise Logo" style="height: 60px" class="mb-3" />
+        <p class="text-muted mb-0">&copy; 2025 DineWise | All rights reserved</p>
+      </div>
+    </div>
+  </footer>
 
-.highlight-box {
-  max-width: 800px;
-  margin: 0 auto;
-  background-color: #ffc107;
-  position: relative;
-  z-index: 1;
-}
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
 
-.uniform-img {
-  width: 100%;
-  max-width: 100%;
-  height: 250px;
-  object-fit: cover;
-  display: block;
-}
+  <script>
+    const contentRow = document.getElementById('content-row');
+    let startX = 0;
+    let endX = 0;
 
-footer a:hover {
-  text-decoration: underline;
-}
+    contentRow.addEventListener('touchstart', (e) => {
+      startX = e.touches[0].clientX;
+    });
 
-.text-sky-dark {
-  color: #058181;
-}
+    contentRow.addEventListener('touchend', (e) => {
+      endX = e.changedTouches[0].clientX;
+      if (endX - startX > 50) {
+        contentRow.classList.remove('swapped');
+      } else if (startX - endX > 50) {
+        contentRow.classList.add('swapped');
+      }
+    });
+  </script>
+</body>
+</html>
