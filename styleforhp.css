@@ -1,9 +1,7 @@
-/* === GENERAL === */
 body {
   font-family: 'Poppins', sans-serif;
 }
 
-/* === NAVBAR === */
 .navbar {
   position: relative;
   z-index: 10;
@@ -41,7 +39,6 @@ form[role="search"] {
   }
 }
 
-/* === HOMEPAGE HERO === */
 .highlight-box {
   max-width: 800px;
   margin: 0 auto;
@@ -50,7 +47,6 @@ form[role="search"] {
   z-index: 1;
 }
 
-/* === IMAGE CARDS === */
 .uniform-img {
   width: 100%;
   max-width: 100%;
@@ -59,7 +55,6 @@ form[role="search"] {
   display: block;
 }
 
-/* === FOOTER === */
 footer a:hover {
   text-decoration: underline;
 }
