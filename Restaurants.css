@@ -107,16 +107,49 @@ aside label {
 
 /* === BODY === */
 
-.card-header-title{
-    display: flex;
-  justify-content: space-between;
-  align-items: center;
+.restaurant-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: white;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease;
 }
 
-.card-img-top {
-  width: 100%;
-  height: 50%;
+.restaurant-card:hover {
+  transform: translateY(-4px);
 }
+
+.restaurant-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.restaurant-card-body {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
+}
+
+.restaurant-card-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.restaurant-card-text {
+  margin-top: 0.5rem;
+  font-size: 0.95rem;
+  color: #555;
+}
+
 .heart-button {
   background: none;
   border: none;
@@ -142,9 +175,20 @@ aside label {
 }
 
 .heart-button.liked::before {
-  content: "❤"; 
+  content: "❤";
   color: #058181;
 }
+
+.no-results-message {
+  display: none; 
+  text-align: center;
+  margin-top: 20px;
+  font-weight: bold;
+  color: #058181; 
+  font-size: 1.2rem;
+  width: 100%;
+}
+
 
 /* === FOOTER === */
 footer a:hover {
