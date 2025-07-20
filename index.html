@@ -8,8 +8,39 @@
     href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css"
     rel="stylesheet"
   />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styleforhp.css" />
+  <style>
+    main {
+      position: relative;
+      padding-top: 60px; 
+    }
+    .back-button {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      z-index: 10;
+    }
+
+    #image-col {
+      order: 1;
+    }
+    #text-col {
+      order: 2;
+    }
+    #content-row.swapped #image-col {
+      order: 2;
+    }
+    #content-row.swapped #text-col {
+      order: 1;
+    }
+
+    .uniform-img {
+      max-height: 400px;
+      object-fit: cover;
+      width: 100%;
+    }
+  </style>
 </head>
 <body>
   <header class="custom-header bg-dark py-3">
@@ -21,15 +52,22 @@
   </header>
 
   <main class="container py-5">
-    <div class="row mb-5">
-      <div class="col-md-6">
-        <img src="https://www.travelandleisure.com/thmb/vAg5d_rhUy-c54Xwz8f0i6jAKYk=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/TAL-restaurant-patio-in-italy-ITLNRESTAURANTS0424-832da3120e1f4b12ade4c4cf6a5ab694.jpg"
-             alt="Luigi's Trattoria"
-             class="img-fluid rounded shadow uniform-img" />
+    <a href="Restaurants.html" class="btn btn-warning text-white back-button">← Back to Restaurants</a>
+
+    <div class="row mb-5 d-flex align-items-center" id="content-row">
+      <div class="col-md-6" id="image-col">
+        <img
+          src="https://www.travelandleisure.com/thmb/vAg5d_rhUy-c54Xwz8f0i6jAKYk=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/TAL-restaurant-patio-in-italy-ITLNRESTAURANTS0424-832da3120e1f4b12ade4c4cf6a5ab694.jpg"
+          alt="Luigi's Trattoria"
+          class="img-fluid rounded shadow uniform-img"
+        />
       </div>
-      <div class="col-md-6">
+      <div class="col-md-6" id="text-col">
         <h2 class="text-warning">Luigi's Trattoria</h2>
-        <p class="mt-3">Authentic Italian cuisine in the heart of Tel Aviv. Come for handmade pasta, stay for the warm hospitality and unforgettable tiramisu.</p>
+        <p class="mt-3">
+          Authentic Italian cuisine in the heart of Tel Aviv. Come for handmade pasta, stay for the warm hospitality and
+          unforgettable tiramisu.
+        </p>
 
         <h5 class="mt-4">📍 Address</h5>
         <p>Via Roma 12, Tel Aviv</p>
@@ -45,21 +83,36 @@
         <p>Phone: 03-9876543</p>
       </div>
     </div>
-    <div class="text-center">
-      <a href="Restaurants.html" class="btn btn-warning text-white">← Back to Restaurants</a>
-    </div>
   </main>
 
   <footer class="bg-white text-dark pt-4 border-top">
     <div class="container">
       <div class="text-center">
-        <img src="logo_no_bg.png" alt="DineWise Logo" style="height: 60px;" class="mb-3" />
+        <img src="logo_no_bg.png" alt="DineWise Logo" style="height: 60px" class="mb-3" />
         <p class="text-muted mb-0">&copy; 2025 DineWise | All rights reserved</p>
       </div>
     </div>
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    const contentRow = document.getElementById('content-row');
+    let startX = 0;
+    let endX = 0;
+
+    contentRow.addEventListener('touchstart', (e) => {
+      startX = e.touches[0].clientX;
+    });
+
+    contentRow.addEventListener('touchend', (e) => {
+      endX = e.changedTouches[0].clientX;
+      if (endX - startX > 50) {
+        contentRow.classList.remove('swapped');
+      } else if (startX - endX > 50) {
+        contentRow.classList.add('swapped');
+      }
+    });
+  </script>
 </body>
 </html>
-
