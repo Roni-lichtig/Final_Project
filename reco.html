@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Add Restaurant Review</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <h1>Add Your Restaurant Review</h1>
+  <h3>We’d love to hear your feedback!</h3>
+
+  <form>
+    <label for="restaurant">Select a restaurant:</label>
+    <select id="restaurant" name="restaurant" required>
+      <option value="">-- Choose a restaurant --</option>
+      <option value="Kisu">Kisu</option>
+      <option value="Luigi's Trattoria">Luigi's Trattoria</option>
+      <option value="Convivium Osteria">Convivium Osteria</option>
+      <option value="Luigi's Roma">Luigi's Roma</option>
+      <option value="McDonald's">McDonald's</option>
+      <option value="Cafe Bouloud">Cafe Bouloud</option>
+      <option value="GDB">GDB</option>
+      <option value="Cafein">Cafein</option>
+      <option value="Japanika">Japanika</option>
+    </select>
+
+    <label for="name">Your name:</label>
+    <input type="text" id="name" name="name" placeholder="John Doe" required />
+
+    <label for="rating">Rating (1–5):</label>
+    <select id="rating" name="rating" required>
+      <option value="">-- Select a rating --</option>
+      <option value="1">1 - Poor</option>
+      <option value="2">2 - Fair</option>
+      <option value="3">3 - Average</option>
+      <option value="4">4 - Good</option>
+      <option value="5">5 - Excellent</option>
+    </select>
+
+    <label for="review">Your review:</label>
+    <textarea id="review" name="review" rows="5" placeholder="Write your review here..." required></textarea>
+
+    <button type="submit">Submit Review</button>
+  </form>
+
+</body>
+</html>
