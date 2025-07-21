@@ -58,17 +58,6 @@ select, input, textarea {
 textarea {
   resize: vertical;
 }
-
-button {
-  margin-top: 1.5rem;
-  padding: 0.75rem 1.5rem;
-  background-color: #ffc107;
-  color: white;
-  border: none;
-  border-radius: 0.375rem;
-  font-size: 1rem;
-  cursor: pointer;
-}
 .stars-button {
   background: none;
   border: none;
@@ -79,7 +68,7 @@ button {
   position: relative;
 }
 
-.starts-button::before {
+.stars-button::before {
   content: "☆☆☆☆☆";
   font-size: 20px;
   color: #ffe234;
@@ -89,13 +78,24 @@ button {
   transition: transform 0.2s ease, content 0.2s, color 0.2s;
 }
 
-.starts-button:hover::before {
+.stars-button:hover::before {
   transform: scale(1.2);
 }
 
-.heart-button.liked::before {
+.stars-button.liked::before {
   content: "★★★★★";
   color: #ffe234;
+}
+
+button {
+  margin-top: 1.5rem;
+  padding: 0.75rem 1.5rem;
+  background-color: #ffc107;
+  color: white;
+  border: none;
+  border-radius: 0.375rem;
+  font-size: 1rem;
+  cursor: pointer;
 }
 
 button:hover {
