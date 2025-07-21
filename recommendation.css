@@ -1,0 +1,244 @@
+/* === GENERAL === */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f9f9f9;
+  margin: 0;
+  padding: 2rem;
+}
+
+h1 {
+  color: white;
+  background-color: #058181;
+  padding: 1rem;
+  text-align: center;
+  border-radius: 8px;
+}
+
+h3 {
+  color: #058181;
+  margin-top: 2rem;
+  text-align: center;
+}
+
+/* === FORM STYLING === */
+form {
+  max-width: 600px;
+  margin: 2rem auto;
+  background-color: white;
+  padding: 2rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  margin-top: 1rem;
+}
+
+select, input, textarea {
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 0.375rem;
+  box-sizing: border-box;
+}
+
+textarea {
+  resize: vertical;
+}
+
+button {
+  margin-top: 1.5rem;
+  padding: 0.75rem 1.5rem;
+  background-color: #ffc107;
+  color: white;
+  border: none;
+  border-radius: 0.375rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #e0a800;
+}
+
+/* === YOUR EXISTING STYLES === */
+
+/* === NAVBAR === */
+.navbar {
+  position: relative;
+  z-index: 10;
+}
+
+.navbar-brand img {
+  max-height: 120px;
+}
+
+form[role="search"] {
+  width: 300px;
+}
+
+@media (max-width: 768px) {
+  .navbar-brand img {
+    height: 80px !important;
+  }
+
+  .navbar-collapse {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar-collapse form[role="search"] {
+    width: 100%;
+  }
+
+  .navbar-collapse .form-control {
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+
+  .navbar-collapse .btn {
+    width: 100%;
+  }
+}
+
+/* === HOMEPAGE HERO === */
+.highlight-box {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #ffc107;
+  position: relative;
+  z-index: 1;
+}
+
+/* === FILTER === */
+aside {
+  background-color: #f8f9fa;
+  padding: 1rem;
+  border-radius: 0.375rem;
+}
+
+#sortOptions {
+  color: white;
+  background-color: #ffc107;
+  margin-bottom: 1.5rem;
+  width: 100%;
+}
+
+.filter-option {
+  list-style: none;
+  margin-left: 1rem;
+  margin-top: 0.5rem;
+}
+
+.filter-option label {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+
+.filter-option input[type="checkbox"] {
+  accent-color: #058181;
+}
+
+.apply-button {
+  color: white;
+  background-color: #ffc107;
+  border: none;
+}
+
+/* === BODY === */
+.restaurant-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: white;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease;
+}
+
+.restaurant-card:hover {
+  transform: translateY(-4px);
+}
+
+.restaurant-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.restaurant-card-body {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
+}
+
+.restaurant-card-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.restaurant-card-text {
+  margin-top: 0.5rem;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.heart-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  position: relative;
+}
+
+.heart-button::before {
+  content: "♡";
+  font-size: 20px;
+  color: #058181;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: transform 0.2s ease, content 0.2s, color 0.2s;
+}
+
+.heart-button:hover::before {
+  transform: scale(1.2);
+}
+
+.heart-button.liked::before {
+  content: "❤";
+  color: #058181;
+}
+
+.no-results-message {
+  display: none;
+  text-align: center;
+  margin-top: 20px;
+  font-weight: bold;
+  color: #058181;
+  font-size: 1.2rem;
+  width: 100%;
+}
+
+/* === FOOTER === */
+footer a:hover {
+  text-decoration: underline;
+}
+
+.text-sky-dark {
+  color: #058181;
+}
