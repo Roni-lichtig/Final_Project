@@ -69,6 +69,34 @@ button {
   font-size: 1rem;
   cursor: pointer;
 }
+.stars-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  position: relative;
+}
+
+.starts-button::before {
+  content: "☆☆☆☆☆";
+  font-size: 20px;
+  color: #ffe234;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: transform 0.2s ease, content 0.2s, color 0.2s;
+}
+
+.starts-button:hover::before {
+  transform: scale(1.2);
+}
+
+.heart-button.liked::before {
+  content: "★★★★★";
+  color: #ffe234;
+}
 
 button:hover {
   background-color: #e0a800;
