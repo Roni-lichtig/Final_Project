@@ -21,12 +21,14 @@ main {
 
 /* === HEADER CUSTOMIZATION === */
 .custom-header {
-  background-color: #343a40; /* כהה */
+  background-color: #343a40; 
   padding: 1rem 0;
 }
 
 .custom-header img {
-  height: 100px;
+  height: 20px;
+  width: auto;  
+
 }
 
 .custom-header .container {
