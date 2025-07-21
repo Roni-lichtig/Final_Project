@@ -15,8 +15,8 @@ h1 {
 }
 
 logo {
-    display: block;
-  margin: 1rem auto;
+  display: block;
+/* margin: 1rem auto; */
   max-height: 4px;
   max-width: 10px;
   height: auto;
