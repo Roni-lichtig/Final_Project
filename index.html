@@ -27,11 +27,12 @@
       <option value="Cafein">Cafein</option>
       <option value="Japanika">Japanika</option>
     </select>
-
+    
     <label for="name">Your name:</label>
     <input type="text" id="name" name="name" placeholder="John Doe" required />
 
-    <h5>Price Range</h5>
+     <button class="stars-button" aria-label="Rate your experience"></button>
+
     <label for="price rating">Price Rating (1–3):</label>
     <select id="rating" name="rating" required>
       <option value="">-- Select a rating --</option>
@@ -42,14 +43,13 @@
       <label><input type="checkbox" name="price" value="3"/>$$$</label>
       <label><input type="checkbox" name="price" value="5"/>$$$$$</label>
 
-    <label for="rating">Rating (1–5):</label>
-    <select id="rating" name="rating" required>
-      <option value="">-- Select a rating --</option>
-      <option value="1">1 - Poor</option>
-      <option value="2">2 - Fair</option>
-      <option value="3">3 - Average</option>
-      <option value="4">4 - Good</option>
-      <option value="5">5 - Excellent</option>
+    <label for="Preferences">Preferences:</label>
+    <select id="preferences" name="preferences" required>
+      <option value="">-- Choose Preferences --</option>
+      <option value="Vegan">Vegan</option>
+      <option value="Vegeterian">Vegeterian</option>
+      <option value="Gluten free"></option>
+      <option value="No special preferences">No special preferences</option>
     </select>
 
     <label for="review">Your review:</label>
