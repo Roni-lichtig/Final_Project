@@ -31,30 +31,32 @@
     <label for="name">Your name:</label>
     <input type="text" id="name" name="name" placeholder="John Doe" required />
 
-
-    <label for="price rating">Price Rating (1–3):</label>
+    <label for="rating">Price Rating (1–3):</label>
     <select id="rating" name="rating" required>
       <option value="">-- Select a rating --</option>
       <option value="1">1 - Poor</option>
       <option value="2">2 - Fair</option>
-      
-      <label><input type="checkbox" name="price" value="1"/>$</label>
-      <label><input type="checkbox" name="price" value="3"/>$$$</label>
-      <label><input type="checkbox" name="price" value="5"/>$$$$$</label>
+      <option value="3">3 - Great</option>
+    </select>
 
-    <label for="Preferences">Preferences:</label>
+    <p>Price Range:</p>
+    <label><input type="checkbox" name="price" value="1"/> $</label>
+    <label><input type="checkbox" name="price" value="3"/> $$$</label>
+    <label><input type="checkbox" name="price" value="5"/> $$$$$</label>
+
+    <label for="preferences">Preferences:</label>
     <select id="preferences" name="preferences" required>
       <option value="">-- Choose Preferences --</option>
       <option value="Vegan">Vegan</option>
-      <option value="Vegeterian">Vegeterian</option>
+      <option value="Vegetarian">Vegetarian</option>
       <option value="Gluten free">Gluten free</option>
       <option value="No special preferences">No special preferences</option>
     </select>
 
-    <label for="Positive notes">Positive Notes:</label>
+    <label for="good_review">Positive Notes:</label>
     <textarea id="good_review" name="good_review" rows="5" placeholder="Write your positive notes here..." required></textarea>
 
-    <label for="Negative notes">Negative Notes:</label>
+    <label for="negative_review">Negative Notes:</label>
     <textarea id="negative_review" name="negative_review" rows="5" placeholder="Write your negative notes here..." required></textarea>
       
     <button class="stars-button" aria-label="Rate your experience"></button>
