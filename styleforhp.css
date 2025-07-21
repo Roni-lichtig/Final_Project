@@ -1,27 +1,40 @@
 main {
-  position: relative; 
-  padding-top: 60px; 
+  position: relative;
+  padding-top: 60px;
 }
-/*
-.back-button {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  z-index: 10;
-}
-*/
-/* Bootstrap כבר מגדיר display:flex ל-row, רק מוסיפים transition */
+
+/* row animation on swap */
 .row {
   transition: flex-direction 0.3s ease;
 }
 
-/* כשהמחלקה swapped תתווסף, נעשה הפוך */
 .row.swapped {
   flex-direction: row-reverse;
 }
 
+/* uniform image settings */
 .uniform-img {
   max-height: 400px;
   object-fit: cover;
   width: 100%;
+}
+
+/* === HEADER CUSTOMIZATION === */
+.custom-header {
+  background-color: #343a40; /* כהה */
+  padding: 1rem 0;
+}
+
+.custom-header img {
+  height: 100px;
+}
+
+.custom-header .container {
+  text-align: center;
+}
+
+/* Button styling (optional override if needed) */
+.back-button {
+  margin-top: 2rem;
+  display: inline-block;
 }
