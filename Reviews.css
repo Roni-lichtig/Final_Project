@@ -1,0 +1,303 @@
+/* === GENERAL === */
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+h1 {
+    color: white;
+    background-color: #058181;
+}
+
+h3 {
+    color: #058181;
+}
+
+/* === NAVBAR === */
+.navbar {
+  position: relative;
+  z-index: 10;
+}
+
+.navbar-brand img {
+  max-height: 120px;
+}
+
+form[role="search"] {
+  width: 300px;
+}
+
+@media (max-width: 768px) {
+  .navbar-brand img {
+    height: 80px !important;
+  }
+
+  .navbar-collapse {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar-collapse form[role="search"] {
+    width: 100%;
+  }
+
+  .navbar-collapse .form-control {
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+
+  .navbar-collapse .btn {
+    width: 100%;
+  }
+}
+
+/* === FILTER === */
+aside {
+  background-color: #f8f9fa; 
+  padding: 1rem;
+  border-radius: 0.375rem; 
+}
+
+#addReviewBtn {
+  background-color: #ffc107;
+}
+
+#sortOptions {
+  color: white;
+  background-color: #058181;
+}
+
+aside label {
+  display: block;
+  margin-bottom: 0.5rem; 
+}
+
+#sortOptions {
+  margin-bottom: 1.5rem; 
+  width: 100%; 
+  }
+
+.filter-option {
+  list-style: none;
+  margin-left: 1rem;
+  margin-top: 0.5rem;
+}
+
+.filter-option label {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+
+.filter-option input[type="checkbox"] {
+  accent-color: #058181; 
+}
+
+.apply-button {
+    color: white;
+    background-color: #ffc107;
+    border: none;
+}
+
+/* === BODY === */
+
+.review-card {
+  background: #fff;
+  padding: 1.5rem 2rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  font-family: 'Poppins', sans-serif;
+  color: #222;
+  margin-bottom: 2rem;
+}
+
+.restaurant-card:hover {
+  transform: translateY(-4px);
+}
+
+.restaurant-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.restaurant-card-body {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
+}
+
+.restaurant-card-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.restaurant-card-text {
+  margin-top: 0.5rem;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.heart-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  position: relative;
+}
+
+.heart-button::before {
+  content: "♡";
+  font-size: 20px;
+  color: #058181;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: transform 0.2s ease, content 0.2s, color 0.2s;
+}
+
+.heart-button:hover::before {
+  transform: scale(1.2);
+}
+
+.heart-button.liked::before {
+  content: "❤";
+  color: #058181;
+}
+
+.no-results-message {
+  display: none; 
+  text-align: center;
+  margin-top: 20px;
+  font-weight: bold;
+  color: #058181; 
+  font-size: 1.2rem;
+  width: 100%
+}
+
+.review {
+  direction: ltr; 
+  background: #fff;
+  padding: 1.5rem 2rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  font-family: Arial, sans-serif;
+  color: #222;
+  margin-bottom: 2rem;
+  width: 100%;
+}
+
+.review-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.rating-box {
+  background-color: #114b8a;
+  color: white;
+  font-weight: 700;
+  font-size: 1.3rem;
+  width: 2.4rem;
+  height: 2.4rem;
+  border-radius: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.review-author {
+  font-weight: bold;
+}
+
+.author-name {
+  font-size: 1.1rem;
+}
+
+.author-country {
+  font-size: 0.8rem;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.review-date {
+  font-size: 0.9rem;
+  color: #666;
+  display: block;
+}
+
+.stars {
+  font-size: 1.2rem;
+  color: #ffc107;
+}
+
+.review-title {
+  color: #058181;
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin: 0.5rem 0 0;
+}
+
+.review-Subtitle {
+font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+.review-content p {
+  margin: 0.5rem 0;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.review-info {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 0.9rem;
+  color: #555;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: flex-end;
+}
+
+.review-info li {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.icon {
+  font-size: 1.2rem;
+}
+
+.emoji-paragraph {
+  position: relative;
+  padding-left: 1.8em; 
+  text-indent: -1.2em; 
+  line-height: 1.6;
+}
+
+.emoji-paragraph .emoji {
+  position: relative;
+  margin-right: 0.5em;
+}
+
+/* === FOOTER === */
+footer a:hover {
+  text-decoration: underline;
+}
+
+.text-sky-dark {
+  color: #058181;
+}
