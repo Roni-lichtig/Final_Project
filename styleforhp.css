@@ -13,10 +13,16 @@ main {
 }
 
 /* uniform image settings */
-.uniform-img {
+
+/*.uniform-img {
   max-height: 400px;
   object-fit: cover;
   width: 100%;
+}*/
+.uniform-img {
+  width: 100%;
+  max-width: 100%;
+  display: block;
 }
 
 /* === HEADER CUSTOMIZATION === */
@@ -36,6 +42,13 @@ main {
   text-align: center;
 }
 
+/* === IMAGE CARDS === */
+
+
+/* === FOOTER === */
+footer a:hover {
+  text-decoration: underline;
+}
 /* Button styling (optional override if needed) */
 .back-button {
   margin-top: 2rem;
