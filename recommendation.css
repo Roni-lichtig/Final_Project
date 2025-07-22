@@ -49,7 +49,7 @@ form {
   position: relative;
 }
 
-.stars-button::before {
+/*  ---- .stars-button::before { 
   content: "☆☆☆☆☆";
   font-size: 20px;
   color: #ffe234;
@@ -66,6 +66,26 @@ form {
 .stars-button.liked::before {
   content: "★★★★★";
   color: #ffe234;
+}*/
+
+.star-rating {
+  direction: ltr;
+  unicode-bidi: bidi-override;
+  font-size: 2rem;
+  color: #ccc;
+  display: inline-block;
+  cursor: pointer;
+  margin: 0.5rem 0;
+}
+
+.star {
+  display: inline-block;
+  transition: color 0.2s;
+}
+
+.star.hovered,
+.star.selected {
+  color: #ffe234; /* זהב */
 }
 
 label {
