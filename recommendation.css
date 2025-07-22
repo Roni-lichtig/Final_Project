@@ -40,7 +40,91 @@ form {
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
-.3stars-button {
+.3stars-button,
+.4stars-button,
+.5stars-button {
+  position: relative;
+  background: none;
+  border: 2px solid transparent; /* גבול שקוף כברירת מחדל */
+  cursor: pointer;
+  width: 80px;       /* מספיק רחב לכוכבים */
+  height: 30px;
+  padding: 0;
+  margin-right: 10px;
+  display: inline-block;
+  border-radius: 6px; /* פינות מעוגלות (אופציונלי) */
+  transition: border-color 0.3s ease;
+}
+
+.3stars-button::before {
+  content: "☆☆☆";
+  font-size: 24px;
+  color: #ccc;          /* צבע כוכבים לא פעילים */
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: transform 0.2s ease, content 0.2s, color 0.2s;
+}
+
+.3stars-button:hover::before,
+.3stars-button.hovered::before,
+.3stars-button.liked::before {
+  content: "★★★";
+  color: #ffe234;       /* צהוב */
+  transform: scale(1.2);
+}
+
+.4stars-button::before {
+  content: "☆☆☆☆";
+  font-size: 24px;
+  color: #ccc;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: transform 0.2s ease, content 0.2s, color 0.2s;
+}
+
+.4stars-button:hover::before,
+.4stars-button.hovered::before,
+.4stars-button.liked::before {
+  content: "★★★★";
+  color: #ffe234;
+  transform: scale(1.2);
+}
+
+.5stars-button::before {
+  content: "☆☆☆☆☆";
+  font-size: 24px;
+  color: #ccc;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: transform 0.2s ease, content 0.2s, color 0.2s;
+}
+
+.5stars-button:hover::before,
+.5stars-button.hovered::before,
+.5stars-button.liked::before {
+  content: "★★★★★";
+  color: #ffe234;
+  transform: scale(1.2);
+}
+
+/* שינוי צבע המסגרת בהובר ובלחיצה */
+.3stars-button:hover,
+.3stars-button.hovered,
+.3stars-button.liked,
+.4stars-button:hover,
+.4stars-button.hovered,
+.4stars-button.liked,
+.5stars-button:hover,
+.5stars-button.hovered,
+.5stars-button.liked {
+  border-color: #ffe234; /* צהוב */
+}
+
+
+/*.3stars-button {
   background: none;
   border: none;
   cursor: pointer;
@@ -142,7 +226,7 @@ form {
   content: "★★★★★";
   color: #ffe234;
   transform: scale(1.2);
-}
+}*/
 
 label {
   display: block;
