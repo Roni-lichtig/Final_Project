@@ -7,6 +7,37 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="recommendation.css">
 </head>
+
+<script>
+document.querySelectorAll('.star-rating').forEach(rating => {
+  const stars = rating.querySelectorAll('.star');
+
+  stars.forEach(star => {
+    // מעבר עם העכבר
+    star.addEventListener('mouseenter', () => {
+      const value = parseInt(star.dataset.value);
+      stars.forEach(s => {
+        s.classList.toggle('hovered', parseInt(s.dataset.value) <= value);
+      });
+    });
+
+    // עזיבת העכבר
+    star.addEventListener('mouseleave', () => {
+      stars.forEach(s => s.classList.remove('hovered'));
+    });
+
+    // לחיצה לבחירה
+    star.addEventListener('click', () => {
+      const value = parseInt(star.dataset.value);
+      rating.dataset.selected = value;
+      stars.forEach(s => {
+        s.classList.toggle('selected', parseInt(s.dataset.value) <= value);
+      });
+    });
+  });
+});
+</script>
+
 <body>
 
   <h1>Add Your Restaurant Review</h1>
