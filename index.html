@@ -8,36 +8,6 @@
   <link rel="stylesheet" href="recommendation.css">
 </head>
 
-<script>
-document.querySelectorAll('.star-rating').forEach(rating => {
-  const stars = rating.querySelectorAll('.star');
-
-  stars.forEach(star => {
-    // מעבר עם העכבר
-    star.addEventListener('mouseenter', () => {
-      const value = parseInt(star.dataset.value);
-      stars.forEach(s => {
-        s.classList.toggle('hovered', parseInt(s.dataset.value) <= value);
-      });
-    });
-
-    // עזיבת העכבר
-    star.addEventListener('mouseleave', () => {
-      stars.forEach(s => s.classList.remove('hovered'));
-    });
-
-    // לחיצה לבחירה
-    star.addEventListener('click', () => {
-      const value = parseInt(star.dataset.value);
-      rating.dataset.selected = value;
-      stars.forEach(s => {
-        s.classList.toggle('selected', parseInt(s.dataset.value) <= value);
-      });
-    });
-  });
-});
-</script>
-
 <body>
 
   <h1>Add Your Restaurant Review</h1>
@@ -49,16 +19,11 @@ document.querySelectorAll('.star-rating').forEach(rating => {
     <label for="name">Your name:</label>
     <input type="text" id="name" name="name" placeholder="John Doe" required />
 
-  <div class="star-rating" data-selected="0">
-    <span class="star" data-value="1">&#9733;</span>
-    <span class="star" data-value="2">&#9733;</span>
-    <span class="star" data-value="3">&#9733;</span>
-    <span class="star" data-value="4">&#9733;</span>
-    <span class="star" data-value="5">&#9733;</span>
-  </div>
-
     <label for="headline">Headline review:</label>
     <input type="text" id="headline" name="headline" placeholder="My great review for..." required />
+    
+    <label for="rating">Rate your experiece (3-5):</label>
+
     
     <label for="restaurant">Select a restaurant:</label>
     <select id="restaurant" name="restaurant" required>
