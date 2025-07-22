@@ -17,7 +17,7 @@ h1 {
 .logo {
   display: block;
   margin: 1rem auto;
-  max-height: 50px;
+  max-height: 10px;
   max-width: 200px;
   height: auto;
   width: auto;
@@ -38,25 +38,6 @@ form {
   padding: 2rem;
   border-radius: 0.75rem;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-}
-
-label {
-  display: block;
-  margin-bottom: 0.5rem;
-  margin-top: 1rem;
-}
-
-select, input, textarea {
-  width: 100%;
-  padding: 0.75rem;
-  font-size: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 0.375rem;
-  box-sizing: border-box;
-}
-
-textarea {
-  resize: vertical;
 }
 .stars-button {
   background: none;
@@ -85,6 +66,25 @@ textarea {
 .stars-button.liked::before {
   content: "★★★★★";
   color: #ffe234;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  margin-top: 1rem;
+}
+
+select, input, textarea {
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 0.375rem;
+  box-sizing: border-box;
+}
+
+textarea {
+  resize: vertical;
 }
 
 button {
