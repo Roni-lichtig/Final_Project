@@ -69,6 +69,12 @@ form {
   color: #ffe234;
 }
 
+.3stars-button.hovered::before {
+  content: "★★★";
+  color: #ffe234;
+  transform: scale(1.2);
+}
+
 .4stars-button {
   background: none;
   border: none;
@@ -96,6 +102,12 @@ form {
 .4stars-button.liked::before {
   content: "★★★★";
   color: #ffe234;
+}
+
+.4stars-button.hovered::before {
+  content: "★★★★";
+  color: #ffe234;
+  transform: scale(1.2);
 }
 
 .5stars-button {
@@ -126,26 +138,10 @@ form {
   content: "★★★★★";
   color: #ffe234;
 }
-
-/*
-.star-rating {
-  direction: ltr;
-  unicode-bidi: bidi-override;
-  font-size: 2rem;
-  color: #ccc;
-  display: inline-block;
-  cursor: pointer;
-  margin: 0.5rem 0;
-}
-
-.star {
-  display: inline-block;
-  transition: color 0.2s;
-}
-
-.star.hovered,
-.star.selected {
-  color: #ffe234; /* זהב */
+.5stars-button.hovered::before {
+  content: "★★★★★";
+  color: #ffe234;
+  transform: scale(1.2);
 }
 
 label {
