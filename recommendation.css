@@ -261,3 +261,8 @@ button {
 button:hover {
   background-color: #e0a800;
 }
+/* מדיה קווריז לקטנים (ניידים) */
+@media (max-width: 576px) {
+  body {
+    padding: 1rem;
+  }
