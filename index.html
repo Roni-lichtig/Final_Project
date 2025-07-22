@@ -10,8 +10,13 @@
 <body>
 
   <h1>Add Your Restaurant Review</h1>
-  <img src="logo_no_bg.png" alt="DineWise Logo" class="logo" style="height: 200px;" />
+  <img src="logo_no_bg.png" alt="DineWise Logo" class="logo" style="height: 150px;" />
   <h3>We’d love to hear your feedback!</h3>
+
+  <section class="mt-4">
+        <label for="Rating">Your rating (3/4/5 stars):</label>
+        <button class="stars-button" aria-label="Rate your experience"></button>        
+    </section>
 
     <label for="name">Your name:</label>
     <input type="text" id="name" name="name" placeholder="John Doe" required />
@@ -49,7 +54,7 @@
       <option value="No special preferences">No special preferences</option>
     </select>
 
-    <label for="Special occasion">Special Occasion:</label>
+    <label for="Special occasion">👥 Special Occasion:</label>
     <select id="preferences" name="preferences" required>
       <option value="">-- Choose Occasion --</option>
       <option value="Birthday">Birthday</option>
@@ -71,11 +76,6 @@
 
     <label for="negative_review">☹️ Negative Notes:</label>
     <textarea id="negative_review" name="negative_review" rows="5" placeholder="Write your negative notes here..." required></textarea>
-
-    <section class="mt-4">
-        <label for="Rating">Your rating (3/4/5 stars):</label>
-        <button class="stars-button" aria-label="Rate your experience"></button>        
-    </section>
     
     
     <button type="submit">Submit Review</button>
