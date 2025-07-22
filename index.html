@@ -18,10 +18,13 @@
     <label for="name">Your name:</label>
     <input type="text" id="name" name="name" placeholder="John Doe" required />
 
-    <section class="starts-button">
-        <label for="Rating">Your rating (3/4/5 stars):</label>
-        <button class="stars-button" aria-label="Rate your experience"></button>        
-    </section>
+  <div class="star-rating" data-selected="0">
+    <span class="star" data-value="1">&#9733;</span>
+    <span class="star" data-value="2">&#9733;</span>
+    <span class="star" data-value="3">&#9733;</span>
+    <span class="star" data-value="4">&#9733;</span>
+    <span class="star" data-value="5">&#9733;</span>
+  </div>
 
     <label for="headline">Headline review:</label>
     <input type="text" id="headline" name="headline" placeholder="My great review for..." required />
