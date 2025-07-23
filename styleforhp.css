@@ -14,8 +14,18 @@ main {
 
 
 .logo-img {
-  height: 100px;
+  height: 200px;
 }
+
+.address-title {
+  margin-top: 1.5rem; /* כמו mt-4 של Bootstrap */
+}
+
+.address-link {
+  text-decoration: none;
+  color: inherit;
+}
+
 
 .uniform-img {
   width: 100%;
@@ -40,14 +50,6 @@ main {
   text-align: center;
 }
 
-.address-title {
-  margin-top: 1.5rem; /* כמו mt-4 של Bootstrap */
-}
-
-.address-link {
-  text-decoration: none;
-  color: inherit;
-}
 
 /* === FOOTER === */
 footer a:hover {
