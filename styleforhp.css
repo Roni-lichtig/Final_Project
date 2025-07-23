@@ -12,13 +12,11 @@ main {
   flex-direction: row-reverse;
 }
 
-/* uniform image settings */
 
-/*.uniform-img {
-  max-height: 400px;
-  object-fit: cover;
-  width: 100%;
-}*/
+.logo-img {
+  height: 100px;
+}
+
 .uniform-img {
   width: 100%;
   max-width: 100%;
@@ -41,9 +39,6 @@ main {
 .custom-header .container {
   text-align: center;
 }
-
-/* === IMAGE CARDS === */
-
 
 /* === FOOTER === */
 footer a:hover {
