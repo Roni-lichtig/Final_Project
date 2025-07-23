@@ -40,6 +40,15 @@ main {
   text-align: center;
 }
 
+.address-title {
+  margin-top: 1.5rem; /* כמו mt-4 של Bootstrap */
+}
+
+.address-link {
+  text-decoration: none;
+  color: inherit;
+}
+
 /* === FOOTER === */
 footer a:hover {
   text-decoration: underline;
